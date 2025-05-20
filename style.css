@@ -1,0 +1,17 @@
+.hidden{
+    display: none;
+}
+div{
+    width: 25%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+form > *{
+    margin-top: 10px;
+}
+/*
+.contenido-pestaña { display: none; }
+.contenido-pestaña.active { display: block; }
+*/
