@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gestor de proyectos</h1>  
+    <a href="proyectos.html"><strong>Ir a Proyectos</strong></a>
+    <div id = 'divPersona'>  
+     <form id="formularioPersona">     
+        <h1>Agregar persona</h1>        
+        <label>Nombre:</label>         
+        <input type="text" id ="inputNombrePersona" placeholder = "Nombre">         
+        <label>Correo electrónico:</label>        
+        <input type="text" id = "inputCorreoElectronico" placeholder="Correo electrónico">
+        <label>Rol:</label>
+        <select id="selectRol">
+            <option value = 'Jefe de proyecto'>Jefe de proyecto</option>
+            <option value = 'Programador'>Programador</option>
+            <option value = 'Analista'>Analista</option>
+            <option value = 'Tester'>Tester</option>
+        </select>
+        <button id="botonAgregarPersonas" type="submit">Agregar persona</button>
+     </form>   
+     <table id="tablaPersonas">     
+        <thead>
+            <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Rol</th>
+            <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyPersonas"></tbody>     
+     </table>
+    <script type = "module" src = "persona.js"></script>
+</body>
+</html>

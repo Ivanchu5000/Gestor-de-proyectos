@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="style.css">
+</head>
+<body>
+    <h1>Proyectos</h1>
+    <header>
+        <a href="persona.html"><strong>Ir a Personas</strong></a>
+    </header>
+    
+    <div id = 'divProyectos'>  
+        <form id="formularioProyectos">     
+        <h1>Agregar proyecto</h1>        
+        <label>Título:</label>         
+        <input type="text" id ="inputNombreProyecto" placeholder = "Título">         
+        <label>Descripción:</label>        
+        <input type="text" id = "inputDescripcion" placeholder="Descripción del proyecto">
+        <select id="selectPersonasAfiliadas">
+            
+        </select>
+        <button id="buttonAnadirTrabajador">Añadir trabajador</button>
+        <label>Personas afiliadas:</label>
+        <div id="divPersonasAgregadas">
+            
+        </div>
+        <button type="submit">Agregar proyecto</button>
+        </form>   
+    </div>
+    <script type="module" src="proyecto.js"></script>
+</body>
+</html>
