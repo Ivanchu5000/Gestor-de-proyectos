@@ -13,22 +13,37 @@
     </header>
     
     <div id = 'divProyectos'>  
-        <form id="formularioProyectos">     
-        <h1>Agregar proyecto</h1>        
-        <label>Título:</label>         
-        <input type="text" id ="inputNombreProyecto" placeholder = "Título">         
-        <label>Descripción:</label>        
-        <input type="text" id = "inputDescripcion" placeholder="Descripción del proyecto">
-        <select id="selectPersonasAfiliadas">
-            
-        </select>
-        <button id="buttonAnadirTrabajador">Añadir trabajador</button>
-        <label>Personas afiliadas:</label>
-        <div id="divPersonasAgregadas">
-            
+        <div>
+            <form id="formularioProyectos">     
+            <h1>Agregar proyecto</h1>        
+            <label>Título:</label>         
+            <input type="text" id ="inputNombreProyecto" placeholder = "Título">         
+            <label>Descripción:</label>        
+            <input type="text" id = "inputDescripcion" placeholder="Descripción del proyecto">
+            <select id="selectPersonasAfiliadas">
+                
+            </select>
+            <button id="buttonAnadirTrabajador">Añadir trabajador</button>
+            <label>Personas afiliadas:</label>
+            <textarea id="divPersonasAgregadas" readonly="true">
+                
+            </textarea>
+            <button type="submit">Agregar proyecto</button>
+            </form>  
+        </div> 
+        <div id="divTablaProyectos">
+            <table id="tablaPersonas">     
+                <thead>
+                    <tr>
+                    <th>Título</th>
+                    <th>Descripción</th>
+                    <th>Personas afiliadas</th>
+                    <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyPersonas"></tbody>     
+            </table>
         </div>
-        <button type="submit">Agregar proyecto</button>
-        </form>   
     </div>
     <script type="module" src="proyecto.js"></script>
 </body>

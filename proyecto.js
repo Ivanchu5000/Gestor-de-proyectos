@@ -17,20 +17,20 @@ function obtenerValoresSelect(){
 }
 
 function anadirTrabajador(){
-    document.getElementById('divPersonasAgregadas').innerHTML = '';
+   document.getElementById('divPersonasAgregadas').innerHTML = '';
    const legajoSeleccionado = parseInt(document.getElementById("selectPersonasAfiliadas").value);   
    const personaSeleccionada = personas.find(p => p.legajo === legajoSeleccionado);
 
    trabajadoresAfiliados.push(personaSeleccionada);
    console.log(trabajadoresAfiliados);
 
-   let p = document.createElement('p');
+   let p = '';
    trabajadoresAfiliados.forEach(trabajador => {
-        p.innerText+=trabajador.legajo + '.- ' + trabajador.nombre + ' (' + trabajador.rol + ')';
-        p.innerText+='\n'
+        p+=trabajador.legajo + '.- ' + trabajador.nombre + ' (' + trabajador.rol + ')';
+        p+='\n'
     });
 
-    document.getElementById('divPersonasAgregadas').appendChild(p);
+    document.getElementById('divPersonasAgregadas').value = p;
 }
 
 

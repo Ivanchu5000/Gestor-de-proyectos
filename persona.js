@@ -31,6 +31,11 @@ function agregarPersonas(){
         alert('Datos incompletos: rellene todos los campos');
         return;
     }
+    let correoExistente = personas.find(p => inputCorreoElectronico.value === p.correo);
+    if(correoExistente){
+         alert('Introduzca un correo electrónico no repetido');
+        return;
+    }
     let objetoPersona = new Persona(legajoActual, inputNombre.value, inputCorreoElectronico.value, selectRol.value);
     personas.push(objetoPersona);
     legajoActual++;
@@ -54,9 +59,14 @@ function actualizarTabla(){
 
 function eliminarPersona(legajo){
     personas = personas.filter(persona => persona.legajo !== legajo);
+    localStorage.setItem('key',JSON.stringify(personas));
     actualizarTabla();
 }
-
+function eliminarTodo(){
+    personas = [];
+    localStorage.clear();
+    actualizarTabla();
+}
 document.getElementById('tbodyPersonas').addEventListener('click', e => {
     if (e.target.classList.contains('btnEliminar')) {
         const legajo = parseInt(e.target.getAttribute('data-legajo'));
@@ -70,3 +80,5 @@ document.getElementById('formularioPersona').addEventListener('submit', e => {
     agregarPersonas();
     actualizarTabla();
 });
+
+document.getElementById('buttonEliminarTodo').addEventListener('click', () => {eliminarTodo()});

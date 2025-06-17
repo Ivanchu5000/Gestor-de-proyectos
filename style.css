@@ -1,15 +1,140 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6fb;
+  color: #222;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #3949ab;
+    font-weight: 500;
+    transition: color 0.2s;
+    background: #fff;                /* Fondo blanco */
+    border: 1.5px solid #d1d5db;     /* Borde gris */
+    border-radius: 10px;             /* Bordes redondos */
+    padding: 10px 18px;              /* Espaciado interno */
+    display: inline-block;           /* Para que el padding y border funcionen bien */
+    box-shadow: 0 2px 8px rgba(44,62,80,0.04); /* Sombra ligera opcional */
+}
+
+a:hover {
+    color: #1a237e;
+    border-color: #b0bec5;
+    background: #f4f6fb;
+}
+
+/* Encabezado */
+header {
+  background: #2d3e50;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(44,62,80,0.08);
+  padding: 2rem;
+}
+
+/* Botones */
+button, .btn {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 1rem;
+}
+
+button:hover, .btn:hover {
+  background: #2563eb;
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem; /* Menor separación entre elementos */
+  align-items: center;
+}
+
+form > * {
+  margin-top: 0.2rem; /* Menor margen superior */
+  width: 95%;
+  max-width: 400px;
+}
+
+label {
+  margin-bottom: 0.1rem;
+  font-weight: 500;
+  color: #2d3e50;
+  text-align: left;
+  width: 100%;
+  display: block;
+}
+
+input, select, textarea {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+/* Tarjetas */
+.card {
+  background: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.04);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 24px rgba(44,62,80,0.10);
+}
+
+/* Estilos personalizados */
 .hidden{
     display: none;
 }
-div{
+#divPersona{
     width: 25%;
-}
-form{
-    display: flex;
-    flex-direction: column;
-}
-form > *{
-    margin-top: 10px;
 }
 /*
 .contenido-pestaña { display: none; }
@@ -18,4 +143,25 @@ form > *{
 a{
     text-decoration: none;
     
+}
+textarea{
+    height: 100px;
+}
+#divProyectos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#divTablaProyectos{
+    padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
 }
